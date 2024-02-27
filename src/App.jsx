@@ -6,13 +6,14 @@ import Model from "./components/models"
 
 function App() {
   const [open, setOpen] = useState(false)
+  const [openGrp, setOpenGrp] = useState(false)
     return (
         <>
             <div className=" h-screen flex">
-                <GrpBar open={ open} setOpen={ setOpen} />
+                <GrpBar open={ open} setOpen={ setOpen} openGrp={openGrp} setOpenGrp={setOpenGrp} />
                 {/* <PocketNotes /> */}
                 <Model open={open} setOpen={setOpen}/>
-                <Notespage  />
+                <Notespage  openGrp={openGrp} setOpenGrp={setOpenGrp} />
             </div>
         </>
     )
