@@ -29,6 +29,7 @@ function Notespage({ openGrp, setOpenGrp }) {
                 content: notes,
                 group: openGrp
             })
+            window.location.reload(false)
         }
         catch (error) {
             console.log(error)
